@@ -5,3 +5,5 @@ current_timestamp,
 current_database(),
 version(),
 'Hello, SQL!';
+
+Part B – Preview Chapter 2
