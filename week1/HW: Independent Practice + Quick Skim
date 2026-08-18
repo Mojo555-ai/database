@@ -1,3 +1,5 @@
+Part A – SQL Practice
+
 SELECT 
 current_timestamp,
 current_database(),
