@@ -1,0 +1,5 @@
+SELECT 
+current_timestamp,
+current_database(),
+version(),
+'Hello, SQL!';
