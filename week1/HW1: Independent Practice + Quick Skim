@@ -7,3 +7,21 @@ VERSION(),
 'Hello, SQL!';
 
 Part B – Preview Chapter 2
+
+Part B
+Skim Chapter 2 of the Practical SQL textbook and take brief notes on:
+
+How to create a database in PostgreSQL.
+	pg 19 - 
+	keywords - make UPPERCASE to make reading command easier
+
+		CREATE
+		DATABASE
+
+			CREATE DATABASE week1_HW_database;
+
+How to create a table (basic syntax and examples of data types).
+
+Why semicolons are important in SQL.
+
+At least two examples of data types you might use in a table.
