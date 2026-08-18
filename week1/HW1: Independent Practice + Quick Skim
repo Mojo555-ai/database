@@ -1,9 +1,9 @@
 Part A – SQL Practice
 
 SELECT 
-current_timestamp,
-current_database(),
-version(),
+CURRENT_TIMESTAMP,
+CURRENT_DATABASE(),
+VERSION(),
 'Hello, SQL!';
 
 Part B – Preview Chapter 2
