@@ -6,22 +6,55 @@ CURRENT_DATABASE(),
 VERSION(),
 'Hello, SQL!';
 
-Part B – Preview Chapter 2
-
 Part B
 Skim Chapter 2 of the Practical SQL textbook and take brief notes on:
 
-How to create a database in PostgreSQL.
+1) How to create a database in PostgreSQL.
 	pg 19 - 
-	keywords - make UPPERCASE to make reading command easier
+	keywords
 
 		CREATE
 		DATABASE
 
 			CREATE DATABASE week1_HW_database;
 
-How to create a table (basic syntax and examples of data types).
+2) How to create a table (basic syntax and examples of data types).
+	
+	"Tables are where data lives and its relationships are defined." pg. 22
+	
+	Open pgAdmin Query tool
+	1 CREATE TABLE teachers (
+		2 id bigserial
+		3 first_name varchar(25),
+		  last_name varchar(50)
+		  school varchar(50)
+		4 hire_date date,
+		5 salary numeric
+		6 );
 
-Why semicolons are important in SQL.
+	VARCHAR is the amount of storage space while (##) is character length maximum value
 
-At least two examples of data types you might use in a table.
+3) Why semicolons are important in SQL.
+
+	"you end the statement with a semicolon, which signals the end of the command. You must end all PostgreSQL statements with a semicolon as part of the ANSI SQL standard." Sometimes you can get away with not ending with a semicolon, but it is not always the case so it is a good habit to form. Pg. 19
+	
+
+4) At least two examples of data types you might use in a table.
+	
+	varchar - which is character length
+		first_name varchar(25),
+		last_name varchar(50)
+			
+			stores variable length character text for teachers first and last names
+
+	date - stores dates without attached times, date formatting is yyyy-mm-dd, this is international standard for date formats to help avoid confusion. Pg. 25
+		
+		an example of this is hire_date 2026-08-22
+
+	numeric - can be used to store things like teachers salaries. salary numeric will help store teachers pay as a number value.
+
+
+Key formatting
+	UPPERCASE SQL keywords (SELECT, CREATE, TEXT, ect...)
+	Avoid camel case and use lowercase_and_underscores
+	Indent code blocks and clauses
