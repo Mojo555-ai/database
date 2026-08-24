@@ -9,10 +9,12 @@ CREATE TABLE teachers(
 );
 
 --Query 2
+--Part A
 
 CREATE TABLE Animal_Types(id SERIAL Primary key, species_name TEXT);
 CREATE TABLE Animals (id INT Primary Key, name TEXT, species_id INT, age INT)
 
+--Part B
 INSERT INTO Animal_Types (id, species_name) 
 VALUES
 (4, 'Lion'),
@@ -32,7 +34,7 @@ ORDER BY id ASC
 5,"Melman",2,4
 6,"Skipper",3,5
 
-
+--Part C
 INSERT INTO Animals (id, name, species_id, age)
 Values
 (4, 'Simba', 1, 3),
