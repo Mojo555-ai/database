@@ -1,0 +1,78 @@
+Joseph Mosich
+CISW 217 C40A (Fall 2026)
+8/30/26
+
+Part A
+
+1) Create a new database called PracticeDB.
+
+CREATE DATABASE "PracticeDB"
+
+
+2) Design your own table on any topic you like 
+
+CREATE TABLE movies (
+	id SERIAL PRIMARY KEY,
+	movies_name VARCHAR (50),
+	year_released NUMERiC,
+	digital_download BOOLEAN
+)
+
+
+3) Insert at least 3 rows of data into your table
+
+INSERT INTO movies (movies_name, year_released, digital_download) 
+VALUES
+	('The Covenant', 2023, true),
+	('The Odyssey', 2026, false),
+	('Doctor Sleep', 2019, true);
+
+
+4)Purposely write one incorrect INSERT statement
+
+ERROR:  syntax error at or near "true"
+LINE 6:  ('The Dark Knight', 2008 true)
+                                  ^ 
+
+SQL state: 42601
+Character: 194
+
+5) RESULTS
+
+SELECT * FROM movies;
+
+"id","movies_name","year_released","digital_download"
+1,"The Covenant",2023,True
+2,"The Odyssey",2026,False
+3,"Doctor Sleep",2019,True
+4,"The Covenant",2023,True
+5,"The Odyssey",2026,False
+6,"Doctor Sleep",2019,True
+7,"The Covenant",2023,True
+8,"The Odyssey",2026,False
+9,"Doctor Sleep",2019,True
+
+
+
+Part B
+
+1) One new concept you noticed
+
+The concept that I noticed and used was BOOLEON, it is a true false statement, like 1/0 or on/off. There are only two possible results that a user can input to narrow their search. 
+
+2) One question you have after skimming the chapter.
+
+I am a little confused about the difference between LIKE and ILIKE operattors. Do they do they perform the same action but with two different programs? What is the major diference between the two? 
+
+CREATE TABLE movies (
+	id SERIAL PRIMARY KEY,
+	movies_name VARCHAR (50),
+	year_released NUMERiC,
+	digital_download BOOLEAN
+)
+
+
+
+--References
+--https://stackoverflow.com/questions/29369179/sql-movie-table-design-query
+--https://www.w3resource.com/projects/sql/sql-projects-on-movie-rental-system.php
