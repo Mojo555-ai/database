@@ -1,0 +1,115 @@
+--select statement is used to retrieve data from table
+--SELECT * FROM teachers;
+
+--the * means to select all columns from all
+
+--if wanting to show only certain columns
+--SELECT first_name, school
+--Select these columns
+--from this table
+
+--FROM teachers
+--from this table
+--from teachers
+--select from columns
+--SELECT salary,first_name
+--FROM teachers
+--ORDER BY salary;
+
+--SELECT last_name, first_name
+--FROM teachers
+--ORDER BY last_name ASC;
+
+--by default POSTGRES sorts by ascending order
+--DESC for descending order
+--ASC means ascending for numbers it goes 1,2,3,4,5
+---for text it goes A,B,C,D
+--for dates oldest to newest
+--DESC puts it into 
+
+--SELECT last_name, school, hire_date
+--FROM teachers
+--want to order by school ASC, hire date DESC
+--ORDER BY school ASC, hire_date DESC
+--dont need to place ASC it does that automatically
+
+--we can find unique vlalues by using DISTINCT after SELECT
+--removes respind values, makes data retrival look neater
+
+--SELECT DISTINCT school
+--FROM teachers;
+
+--where alows us to retrieve only rows that meet a certain condition
+--SELECT first_name, last_name, school
+--FROM teachers
+--WHERE school = 'Myers Middle School';
+
+--look at page 36 for comparison operators
+
+--SELECT  first_name, hire_date
+--from teachers
+--WHERE hire_date < '2010-01-01' --remember date data type is yyyy-mm-dd
+
+--i want to see the teachers that make 40k to 60k
+-- SELECT first_name, last_name, salary
+-- FROM teachers
+-- WHERE salary BETWEEN 40000 AND 60000;
+--remember when using BETWEEN must also have AND
+
+--sometimes you dont know the exact tyext you are looking for  and we will use like in this scenario
+-- SELECt first_name
+-- FROM teachers
+-- WHERE first_name LIKE 'sam%';
+
+--% is a wildcard any number of charcters can appear
+--LIKE vs ILIKE
+--LIKe is case sensitive 
+--ILIKe is not case sensitive
+
+-- _ matches exactly one character
+-- SELECt first_name
+-- FROM teachers
+-- WHERE first_name LIKE '_anet';
+
+--use AND where both 
+-- SELECT *
+-- FROM teachers
+-- WHERE school = 'Myers Middle School'
+
+-- a row must be satisfy both conditions
+
+--use OR when wither condition can be true
+-- SELECT *
+-- FROM teachers
+-- WHERE last_name ='Cole'
+-- OR last_name='Bush'
+-- AND salary < 40000;
+
+-- --using parenthesis
+-- parentheses become importabnt wgen combing AND and OR
+
+-- SELECT *
+-- FROM teachers
+-- WHERE school='F.D. Roosevelt HS'
+-- AND (salary <38000 OR salary >40000)
+
+-- SELECT
+-- what data do you want
+
+-- FROM
+-- where does the data come from
+
+-- WHERE
+-- which row do we want
+
+-- ORDER BY
+-- how are the results found
+
+
+
+
+
+
+
+
+
