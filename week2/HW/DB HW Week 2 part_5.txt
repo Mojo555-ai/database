@@ -1,0 +1,6 @@
+ERROR:  syntax error at or near "true"
+LINE 6:  ('The Dark Knight', 2008 true)
+                                  ^ 
+
+SQL state: 42601
+Character: 194
