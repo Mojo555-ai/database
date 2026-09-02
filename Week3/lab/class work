@@ -107,7 +107,40 @@
 
 
 
+ADDED HW FROM WEEK 3 
 
+-- Step 3
+-- CREATE TABLE carryon_travel_bags (
+-- 	id serial PRIMARY KEY,
+-- 	bag_type VARCHAR(100),
+-- 	cost INT,
+-- 	brand VARCHAR(25),
+-- 	weight VARCHAR(15),
+-- 	volume VARCHAR(15),
+-- 	trip_length VARCHAR(20),
+-- 	laptop_sleeve BOOLEAN
+-- 	);
+
+
+-- Step 4
+-- INSERT INTO carryon_travel_bags (bag_type, cost, brand, weight, volume, trip_length, laptop_sleeve)
+--  	VALUES
+-- 		('duffle', '159', 'patagonia', '1049 g', '40l', '3 days', 'no'),
+--  	('duffle', '179', 'patagonia', '1180 g', '55l', '6 days', 'no'),
+--  	('backpack', '249', 'patagonia', '1635 g', '45l', '4 days', 'yes'),
+-- 		('backpack', '180', 'northface', '1560 g', '35l', '3 days', 'yes'),
+-- 		('roller', '260', 'antler', '3300 g', '47l', '4 days', 'yes');
+
+--Step 5
+
+-- SELECT * FROM carryon_travel_bags;
+
+-- SELECT bag_type, cost, trip_length
+-- FROM carryon_travel_bags
+-- ORDER BY cost
+
+-- SELECT DISTINCT cost, volume, trip_length
+-- FROM carryon_travel_bags
 
 
 
