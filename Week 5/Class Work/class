@@ -1,0 +1,87 @@
+-- CREATE TABLE games (
+-- 	id integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+-- 	title varchar (100),
+-- 	release_year integer
+-- );
+
+-- INSERT INTO games (title, release_year)
+-- 	VALUES
+-- 	('Elden Ring', 2022),
+-- 	('Minecraft', 2011),
+-- 	('Hades', 2020);
+
+-- char (n) stores a fixed length char value
+
+-- ALTER table games
+-- 	ADD COLUMN game_code char (5)
+
+-- UPDATE games
+-- SET game_code='ER001'
+-- WHERE title= 'Elden Ring'
+
+-- text stores variable length without requiring a max length
+-- ALTER TABLE games
+-- ADD COLUMN description text;
+
+-- UPDATE games
+-- SET description='open world RPG'
+-- WHERE title='Elden Ring'
+
+-- numeric stores exact decimal values
+-- numeric(6,2)
+-- 6 is the tota; num,ber of digits
+-- 2 is the number of decimals
+
+-- ALTER TABLE games
+-- ADD COLUMN price numeric(6,2);
+
+-- UPDATE games
+-- SET price=59.99
+-- WHERE title='Elden Ring'
+
+-- postgre SQL will tounf to fit the column
+
+-- reak stores an approximate floating point numnber
+
+-- ALTER TABLE games
+-- ADD column rating real;
+
+-- UPDATE games
+-- SET rating=4.7
+-- WHERE title ='Elden Ring'
+
+-- UPDATE games
+-- SET rating=4.123456789
+-- WHERE title='HADES';
+
+-- ALTER TABLE games
+-- ADD COLUMN hours_played double precision
+
+-- UPDATE games
+-- SET hours_played=127.75698
+-- WHERE title= 'Elden Ring'
+
+-- ALTER TABLE games
+-- ADD COLUMN last_played timestamp;
+
+-- UPDATE games
+-- SET last_played='2026-09-01 14:30:00'
+-- WHERE title='Elden Ring'
+
+-- ALTER TABLE games
+-- ADD COLUMN created_at timestamp WITH time zone;
+
+-- UPDATE games
+-- SET last_played='2026-09-01 14:30:00-07'
+-- WHERE title='Elden Ring'
+
+-- time only stores time of day without date
+-- format is 'HH:MM:SS using 24 hour time'
+
+-- interval stores amont of time rather then a specific date or time
+-- ALTER TABLE games
+-- ADD COLUMN session_length interval
+
+-- UPDATE games
+-- SET session_length='2 hours 30 minutes'
+-- WHERE title='Elden Ring'
