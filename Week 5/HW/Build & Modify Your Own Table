@@ -1,0 +1,153 @@
+
+-- Joseph Mosich
+-- Database
+-- 9/15/2026
+
+-- PART 1
+
+-- CREATE TABLE books (
+-- id integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+-- title varchar(150),
+-- author varchar(50),
+-- year_published integer,
+-- genre varchar(25)
+-- );
+
+-- INSERT INTO books (title, author, year_published, genre)
+-- VALUES
+-- ('Lord of the Flies', 'William Golding', '1954', 'phsychological fiction'),
+-- ('The Alchemist', 'Paulo Coelho', '1988', 'adventure fiction'),
+-- ('Doctor Sleep', 'Stephen King', '2013', 'horror fiction'),
+-- ('A Song Of Ice and Fire', 'George R. R. Martin', '1996', 'fantasy fiction'),
+-- ('The Silence of the Lambs', 'Thomas Harris', '1988', 'horror fiction')
+-- ;
+
+-- SELECT *
+-- FROM books;
+
+-- PART 2
+
+-- ALTER TABLE books
+-- ADD COLUMN read_book boolean,
+-- ADD COLUMN price numeric (6,2)
+-- ;
+
+-- SELECT *
+-- FROM books;
+
+-- ALTER TABLE books
+-- ADD COLUMN isbn char(13),
+-- ADD COLUMN time_read interval
+-- ;
+
+-- SELECT * 
+-- FROM books;
+
+-- PART 3
+
+-- UPDATE books
+-- SET read_book = true,
+-- price = 12.99,
+-- isbn = '9780195634921',
+-- time_read = '4 hours 05 minutes'
+-- WHERE title = 'Lord of the Flies'
+-- ;
+
+-- SELECT *
+-- FROM books
+
+-- UPDATE books
+-- SET read_book = true,
+-- price = '17.99',
+-- isbn = '9780007155668',
+-- time_read = '3 hours 04 minutes'
+-- WHERE title = 'The Alchemist'
+-- ;
+
+-- SELECT *
+-- FROM books;
+
+-- UPDATE books
+-- SET read_book = false,
+-- price = '24.14',
+-- isbn = '9781476727653',
+-- time_read = '11 hours 14 minutes'
+-- WHERE title = 'Doctor Sleep'
+-- ;
+
+-- SELECT *
+-- FROM books;
+
+-- UPDATE books
+-- SET read_book = false,
+-- price = '75.99',
+-- isbn = '9780345535566',
+-- time_read = '102 hours 15 minutes'
+-- WHERE title = 'A Song Of Ice and Fire'
+-- ;
+
+-- SELECT *
+-- FROM books;
+
+-- UPDATE books
+-- SET read_book = true,
+-- price = '8.32',
+-- isbn = '9780312924584',
+-- time_read = '5 hours 52 minutes'
+-- WHERE title = 'The Silence of the Lambs'
+-- ;
+
+-- SELECT *
+-- FROM books;
+
+-- PART 4
+
+-- ALTER TABLE books
+-- RENAME time_read TO reading_time;
+
+-- SELECT *
+-- FROM books
+
+-- ALTER TABLE books
+-- RENAME read_book TO have_read;
+
+-- SELECT *
+-- FROM books
+
+-- PART 5
+
+-- SELECT *
+-- FROM books
+
+-- SELECT title
+-- FROM books;
+
+-- SELECT *
+-- FROM books
+-- WHERE price < 18.00;
+
+-- SELECT title, price
+-- FROM books
+-- ORDER BY title;
+
+-- SELECT *
+-- FROM books
+-- WHERE have_read = false
+-- ORDER BY price DESC;
+
+-- SELECT title, isbn, price
+-- FROM books
+-- WHERE have_read = 'true'
+-- ORDER BY price DESC;
+
+-- Which new data type did you find the most useful?
+	-- Interval and char13 were the most useful to me. Interval was an easy way to enter in a time that was estimated to finished reading the book I could just clearly type in hours
+	-- minutes and did not have to do any calculations. Char 13 was exactly the amount of characters that is in an ISBN so it was really usefull for me. 
+-- Why did you choose the data types you used?
+	-- one of my choices was char 13 because that is the exact length of characters in an ISBN which allowed me to realize quickly igf it was entered wrong. Another is nunmeric (6,2)
+	-- which i used for the price of the book. I quickly learned the (2,2) would not be sufficient to enter in the pvalues I needed and had to change it to (6,2)like we were taught. 
+	-- boolean was chosed for its easy true false options when answering if the book was read. And the one that I had to do the most research on was interval which allowed me to 
+	-- enter in the amount of time it is estimated to read the book by using hours and minutes. 
+-- What is the difference between ALTER TABLE and UPDATE
+	-- Alter table allows you to change the schema of the table like adding, altering the name or dropping a column. While update allows you to data stored inside the table.
+
