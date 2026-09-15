@@ -140,6 +140,17 @@
 -- WHERE have_read = 'true'
 -- ORDER BY price DESC;
 
+-- PART 6
+-- 2 new concepts
+-- 1) I can use copy to import data which will cut down on a lot of tedious time it takes to write out all the data in the future, especially when we are working with and want 
+	-- everything the same as a previous table.
+-- 2) Linking tables using join I think is what will make SQL the most useful. When I worked with excel a lot this was one of the best features. You would pretty much keep building 
+	-- original table which in the long run would cut down on a lot of time that would be wasted regenerating the previous tables. 
+-- One Question
+	-- THe only question that I might have isnt dealing with the chapters, becuase I know a lot will be cleared up in class next week. My question would be more about the midterm,
+	-- I hope we get notes because this is a lot of material and I sometime get stuck in the beginning and it take me a while to get started, which would cause me to lose a lot	
+	-- of time on the test.
+
 -- Which new data type did you find the most useful?
 	-- Interval and char13 were the most useful to me. Interval was an easy way to enter in a time that was estimated to finished reading the book I could just clearly type in hours
 	-- minutes and did not have to do any calculations. Char 13 was exactly the amount of characters that is in an ISBN so it was really usefull for me. 
