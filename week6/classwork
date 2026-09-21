@@ -1,0 +1,53 @@
+-- CREATE DATABASE week6;
+
+-- CREATE TABLE products_raw(id integer PRIMARY KEY, product_name varchar(20), brand varchar(20), category text, price numeric(10,2), stock integer);
+
+-- TWO ways to copy import csv 
+-- 1st option
+-- COPY product_raw
+-- FROM '"C:\Users\506738\Desktop\products_raw.csv
+-- WITH (FORMAT CSV, HEADER); DIDNT WORK
+
+-- SELECT * FROM products_raw LIMIT 5; --LIMIt puts a constraint on how many rows appear
+
+-- Steps to import CSV file
+-- STEP 1 make table template
+-- STEP 2 import using GUI (right click on table import/export data)
+-- confirm file name, delimiter, header is turned on
+-- After import is succesful view table via query SELECT * FROM products_raw LIMIT 5
+
+-- basic arithmatic queries
+-- SELECT price, stock, price*stock AS inventory_value
+-- FROM products_raw LIMIT 5;
+
+-- SELECT price+5 AS Price_Increased
+-- FROM products_raw limit 5;
+
+-- BUILT in functions that postgre has
+-- SUM
+-- SELECT SUM(price*stock)AS total_Inventory_Value
+-- FROM products_raw
+
+-- AVG, average product price
+-- SELECT AVG(price)AS Average_Price 
+-- FROM products_raw
+
+-- Finding the highest and lowest MIN and MAX
+-- SELECT MIN(price), MAX(price)
+-- FROM products_raw
+
+-- how to see how many products are n a dataset
+-- SELECT COUNT(*)
+-- FROM products_raw
+
+-- filtering with MATH
+-- show me products that cost more then 500
+-- SELECT * FROM products_raw
+-- WHERE price > 500;
+
+-- categories with total stock > 200
+-- SELECT category,
+-- SUM (stock)
+-- FROM products_raw
+-- GROUP BY category
+-- HAVING SUM(stock)>50;
