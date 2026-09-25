@@ -1,0 +1,62 @@
+-- Joseph Mosich
+-- Database
+-- 9/24/26
+
+-- PART A STEP 2
+
+-- CREATE TABLE PracticeMathDB (
+-- "Index" integer PRIMARY KEY,
+-- "Name" varchar (250),
+-- "Description" varchar (250),
+-- "Brand" varchar (250),
+-- "Category" text,
+-- "Price" numeric(10,2),
+-- "Currency" text,
+-- "Stock" numeric,
+-- "EAN" char(13),
+-- "Color" varchar(100),
+-- "Size" varchar(100),
+-- "Availability," text,
+-- "Internal ID" numeric
+-- );
+
+-- SELECT * FROM PracticeMathDB;
+
+-- PART A STEP 4
+-- 1) Show total inventory value (SUM of price * stock)
+
+-- SELECT SUM ("Price" * "Stock") AS total_inventory_value FROM PracticeMathDB;
+
+-- SELECT * FROM PracticeMathDB;
+
+-- 2) Find average product price per category
+
+-- SELECT "Category", AVG("Price") AS average_product_price 
+-- FROM PracticeMathDB
+-- GROUP By "Category";
+
+-- SELECT * FROM PracticeMathDB;
+
+-- 3) List ALL products where price > 500
+
+-- SELECT * FROM PracticeMathDB
+-- WHERE "Price" > 500;
+
+-- SELECT * FROM PracticeMathDB;
+
+-- 4) Count how many products belong to one specific category (your choice)
+
+-- SELECT * FROM PracticeMathDB
+-- WHERE "Category" = 'Skincare';
+
+-- 5) Use ORDER BY on price to show products from cheapest to most expensive
+-- SELECT * FROM PracticeMathDB
+-- ORDER BY "Price"ASC
+
+-- SELECT * FROM PracticeMathDB
+
+
+-- Part B – Quick Skim
+-- 1) A concept that I notiiced is JOIN which will act as a way to combine rows from multiple tables based on a related table that they share. There is a way to JOIN rows from different tables that dont have the same name by using INNER.
+
+-- I am wondering how I will pass the midterm? I am able to slowly get the work done at home but it takes me a few tries to write the function out corectly. 
