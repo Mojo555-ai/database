@@ -1,0 +1,19 @@
+-- 1) UPPER() or LOWER() for text conversion.
+-- SELECT UPPER (category)
+-- FROM products; 
+
+-- 2) ROUND() for rounding numeric results.
+-- SELECT ROUND(price,2)
+-- FROM products
+-- ORDER BY price DESC;
+
+-- 3) Create a view showing:
+-- SELECT NOW();
+
+-- 4) Create a view showing:
+-- CREATE VIEW view_products AS
+-- SELECT category
+-- FROM products
+-- WHERE price >= 800;
+
+SELECT * FROM view_products
