@@ -1,0 +1,70 @@
+CREATE TABLE proucts("Index" integer PRIMARY KEY, "Name" varchar (100), Description text, Brand text, Category varchar (67), Price numeric (10,2), Currency varchar (5), Stock integer, 
+-- EAN text, Color text, "Size" text, Availability text, Internal_ID integer);
+
+-- SELECT * FROM proucts;
+
+-- What are functions 
+-- Functions = built in operations that perform a specific task inside a query
+
+-- common built in functions 
+-- ROUND(), round a number to n decimals. EX SELECT ROUND (3.14159,2)    Result 3.14
+
+-- SELECT ROUND (3.14159,2)
+
+-- CEIL()/FLOOR(), Round up or down.
+-- SELECT CEIL(2.1); =3
+
+-- Text fundctions
+-- UPPER(text), converts text to uppercase
+-- SELECT UPPER(category);
+
+-- LOWER(text)
+-- LENGTH(text, returns character count) SELECT LENGTH(product_name)
+
+-- DATE FUNCTION 
+-- NOW(), returns our current timestamp
+-- SELECT NOW();
+
+-- CURRENT_DATE, todays date
+-- SELECT CURRENT_DATE
+
+-- AGE(), returns the difference in two dates
+-- SELECT AGE();
+-- SELECT AGE('2025-10-20','2000-05-15'); 25 years 5 months
+-- date functions are ofter used for reports or logs
+
+-- average price by category
+-- SELECT Category ,
+-- ROUND(AVG(price),2) AS avg_price
+-- FROM proucts
+-- GROUP BY category
+-- ORDER BY avg_price DESC;
+
+-- VIEWS
+-- VIEW is a save SQL QUERY that acts like a cirtual table
+-- it doesnt store new data, it just staors a query definition
+
+-- CREATE VIEW products_summary AS
+-- SELECT Category ,
+-- ROUND(AVG(price),2) AS avg_price,
+-- SUM(stock) AS total_stock
+-- FROM proucts
+-- GROUP BY category
+-- ORDER BY avg_price DESC;
+
+-- views just create a shorcut we can use later as long as we call view
+
+-- SELECT * FROM products_summary;
+
+-- to update the view
+-- REPLACE VIEW products_summary
+-- AS
+
+-- to delete view
+-- DROP VIEW "name of view" DO NOT NEED QUOTES
+
+-- WHY use views? 
+-- simplify long queries, avoid retyping, create consistanct reporting tables, restrict user access (views can hide columns)
+
+SELECT UPPER(category);
+
