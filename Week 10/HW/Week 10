@@ -1,0 +1,52 @@
+-- Joseph Moscih
+-- database
+-- 10/22/26
+
+
+-- 1) Use your dataset (products_raw)
+-- CREATE TABLE products
+-- ("Index" integer PRIMARY KEY, "Name" varchar (100), Description text, Brand text, Category varchar (67), Price numeric (10,2), Currency varchar (5), Stock integer, 
+-- EAN text, Color text, "Size" text, Availability text, Internal_ID integer);
+
+-- 2) Write queries to:
+-- SELECT * FROM products;
+
+-- Find the average price per category → ROUND() and CEIL().
+
+-- SELECT category, 
+-- 	ROUND(AVG(price), 2) AS avg_price_round,
+-- 	CEIL(AVG(price)) AS avg_price_ceil
+-- FROM products
+-- GROUP BY category;
+
+-- Find the highest and lowest price using MAX() and MIN().
+
+-- SELECT 
+-- 	MIN(price) AS lowest_price,
+-- 	MAX(price) AS highest_price
+-- FROM products;
+
+-- Create a derived column FLOOR(price) to see price floored to whole numbers.
+
+-- SELECT price,
+-- 	FLOOR(price) AS price_floored
+-- FROM products;
+
+-- Convert the category to uppercase using UPPER().
+
+-- SELECT UPPER(category) AS category_uppercase
+-- FROM products;
+
+-- Create a view named category_overview that shows:
+-- Category, average price (rounded to 2 decimals), and total stock.
+-- Only include categories where average price > 50.
+
+-- CREATE VIEW category_overview AS
+-- SELECT category,
+-- 	ROUND(AVG(price), 2) AS average_price,
+-- 	SUM(stock) AS total_stock
+-- FROM products
+-- GROUP BY category
+-- HAVING AVG(price) > 50;
+
+-- SELECT * FROM category_overview;
