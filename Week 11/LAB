@@ -1,0 +1,71 @@
+-- SELECT * FROM products;
+
+-- PART A
+-- SELECT COUNT(*) AS total_records 
+-- FROM products;
+
+-- Question 1
+-- How many records are in your table? 100
+
+-- Question 2
+-- Why might the number of records affect query performance?
+-- The larger the file, the more space iit takes, means the more resources the computer has to use to read through the file (like RAM) which will slow the system down. I only have 100 records so that will not slow anything down but if we get to a million records that might slow the system down. This is why you have to use specific querys so the system knows that you are only looking for certain information and it doesnt have to look through the whole file.
+
+-- PART B
+-- Write a query that retrieves all products belonging to the Skincare category.
+-- SELECT * 
+-- FROM products
+-- WHERE category = 'Skincare';
+
+
+-- Did PostgreSQL use a sequential scan (Seq Scan)?
+-- Yes, it was told to because it wasnt given instructions not to. 
+
+-- How many records were returned?
+-- 3
+
+-- What was the execution time?
+-- Query complete 00:00:00.041
+
+
+-- PART C
+-- Create an index on the category column in your products_raw table.
+-- CREATE INDEX index_products_category 
+-- ON products(category);
+
+-- Run the same query from Part B using EXPLAIN ANALYZE.
+-- SELECT * 
+-- FROM products
+-- WHERE category = 'Skincare';
+
+-- Question 1
+-- Did PostgreSQL use an Index Scan, Bitmap Index Scan, or continue using a Seq Scan?
+-- Bitmap Index Scan
+
+-- Question 2
+-- Was the execution time faster or slower?
+-- faster Query complete 00:00:00.035
+
+-- Question 3
+-- Why might PostgreSQL choose not to use an index even when one exists?
+-- I think it is because the table is small it would want to because there is not a lot to go through. 
+
+-- PART D
+-- Temporarily disable sequential scans.
+-- SET enable_seqscan = off;
+
+-- Run your query from Part B again using EXPLAIN ANALYZE.
+-- SELECT * 
+-- FROM products
+-- WHERE category = 'Skincare';
+
+-- Restore the original sequential scan setting when finished.
+-- SET enable_seqscan = on;
+
+-- Question 1
+-- Did disabling sequential scans change how PostgreSQL executed your query?
+-- yes
+
+-- Quiestion 2
+-- Why might PostgreSQL normally prefer a sequential scan over an index scan?
+-- I think it prefers sequential scan becuase it is efficient
