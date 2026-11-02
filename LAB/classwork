@@ -1,0 +1,64 @@
+-- why primary and foreign keys matter?
+-- in a relational database data lives in multiple tables but those tables must be connected somehow
+-- we do this using keys
+-- primary key(pk) a column or set of columns that uniquely identif a row in a table
+-- >student_id, customer_id, product_id
+-- foriegn key (fk) a column  inone table that refers to a pk in another table
+-- a foreign key is just a pk in another table
+
+-- think of pk/fk as parent child relationship - a parent can have manmy children but each child points to one parent
+
+-- creating the parent table (customers)
+
+-- CREATE TABLE customers(
+-- ID serial primary Key,
+-- name text,
+-- email text,
+-- city text
+-- );
+
+-- serial automatically numbers each new record
+-- PK ensures wach id is unique and not null
+
+-- creating child table (orders)
+-- CREATE TABLE orders(
+-- id serial Primary Key,
+-- customer_id int,
+-- product text,
+-- total numeric(10,2),
+-- FOREIGN KEY(customer_id) REFERENCES customers(customer_id)
+-- );
+
+-- customer_id linked each order back to a customer
+-- the FK constraint orphan records
+-- (you cant create an order for a non-existent customer)
+
+-- inserting sample date
+INSERT INTO customers("name", email, city)
+VALUES
+('Alice', 'alice@email.com', 'Boise'),
+('Brian', 'brian@email.com', 'Twin Falls'),
+('Carmen', 'carmen@email.com', 'Jerome');
+
+INSERT INTO orders (customer_id, product, total)
+VALUES
+(1, 'Laptop', 999.99),
+(1, 'Mouse', 25.50),
+(2, 'Headphones', 89.99),
+(3, 'Monitor', 199.99);
+
+-- each orders customer_id points to an existinf cusomer in customers.id
+
+-- viewing the relationship with a JOIN
+-- SELECT 
+-- SELECT
+-- customers.name, --selectind the nae column on the custmoers table
+-- customers.city, --selectinf the city column from the custiners table
+-- -- want to select the products and total solumns from the orders table
+-- orders.product,
+-- orders.total
+-- FROM orders
+-- JOIN customers --JOIN defaults to inner join only rows matching customers will appear
+-- ON orders.customer_id=customers.customer_id
+
+-- PK uniquly 
