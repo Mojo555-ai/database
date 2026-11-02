@@ -1,22 +1,32 @@
--- CREATE TABLE artist (
--- artist_id INT PRIMARY KEY,
--- artist_name VARCHAR(100),
--- genre VARCHAR(100)
+-- CREATE TABLE Artists (
+-- artist_name VARCHAR(100) PRIMARY KEY,
+-- genre VARCHAR(50)
 -- );
 
--- CREATE TABLE albums (
+-- CREATE TABLE Albums (
 -- album_id INT PRIMARY KEY,
 -- album_title VARCHAR(150),
 -- release_year INT,
--- artist_id INT,
--- FOREIGN KEY (artist_id) REFERENCES Artist(artist_id)
+-- artist_name VARCHAR(100),
+-- FOREIGN KEY (artist_name) REFERENCES Artists(artist_name)
 -- );
 
-INSERT INTO artist (artist_id, artist_name, genre)
-VALUES
-('The Beatles', 'Classic Rock',),
-('Miles Davis', 'Jazz'),
-('The Misfits', 'Punk');
+-- INSERT INTO Artists (artist_name, genre) VALUES
+-- ('The Beatles', 'Rock'),
+-- ('Miles Davis', 'Jazz'),
+-- ('The Misfits', 'Punk');
 
-INSERT INTO albums (album_id, album_title, release_year, artist_id)
-VALUES
+-- INSERT INTO Albums (album_id, album_title, release_year, artist_name) VALUES
+-- (101, 'Abbey Road', 1969, 'The Beatles'),
+-- (102, 'Let It Be', 1970, 'The Beatles'),
+-- (103, 'Kind of Blue', 1959, 'Miles Davis'),
+-- (104, 'Static Age', 1996, 'The Misfits');
+
+-- SELECT 
+-- artists.artist_name,
+-- artists.genre,
+-- albums.album_title,
+-- albums.release_year
+-- FROM Albums
+-- JOIN Artists 
+-- ON albums.artist_name = artists.artist_name;
