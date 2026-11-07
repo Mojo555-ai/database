@@ -1,0 +1,19 @@
+﻿album_id,artist_id,album_title,release_year,album_format,best_song
+101,1,Revolver,1966,vinyl,Eleanor Rigby
+102,1,Sgt. Pepper's Lonely Hearts Club Band,1967,vinyl,A Day in the Life
+103,1,Abbey Road,1969,vinyl,Come Together
+104,2,Led Zeppelin II,1969,vinyl,Whole Lotta Love
+105,2,Led Zeppelin IV,1971,vinyl,Stairway to Heaven
+106,2,Physical Graffiti,1975,vinyl,Kashmir
+107,3,Walk Among Us,1982,vinyl,Astro Zombies
+108,3,Earth AD/Wolfs Blood,1983,vinyl,"Die, Die My Darling"
+109,3,Legacy of Brutality,1985,vinyl,Halloween
+110,4,Mommy's Little Monster,1983,vinyl,The Creeps
+111,4,Social Distortion,1990,vinyl,Ball and Chain
+112,4,Somewhere Between Heaven and Hell,1992,vinyl,Bad Luck
+113,5,Sam Cooke,1958,vinyl,You Send Me
+114,5,Night Beat,1963,vinyl,Little Red Rooster
+115,5,Ain't That Good News,1964,vinyl,A Change Is Gonna Come
+116,6,At Folsom Prison,1968,vinyl,Folsom Prison Blues
+117,6,At San Quentin,1969,vinyl,A Boy Named Sue
+118,6,American IV: The Man Comes Around,2002,CD,Hurt
